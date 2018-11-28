@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> List </title>
+</head>
+<body>
+    {% for obj in object_list %}
+    <!-- <a href="{% url 'page-detail' obj.id %}" > -->
+    <a href="{{ obj.get_absolute_url }}">
+        <ul>
+            <li> {{obj.title}} </li>
+        </ul>
+    </a>
+    {% endfor %}
+</body>
+</html>
